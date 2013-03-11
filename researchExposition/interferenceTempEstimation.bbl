@@ -1,0 +1,29 @@
+\begin{thebibliography}{1}
+
+\bibitem{clancy2006}
+T.~Charles Clancy.
+\newblock Formalizing the interference temperature model.
+\newblock {\em Wiley Journal on wireless communications and mobile computing},
+  2006.
+
+\bibitem{haykin2005}
+Simon Haykin.
+\newblock Cognitive radio: Brain-empowered wireless communications.
+\newblock {\em IEEE Journal on selected areas in communications}, 23(2), 2005.
+
+\bibitem{kolodzy2006}
+Paul~J Kolodzy.
+\newblock Interference temperature: A metric for dynamic spectrum utilization.
+\newblock 2006.
+
+\bibitem{percival1993}
+D~B Percival and A~T Walden.
+\newblock {\em Spectral Analysis for Physical Applications}.
+\newblock Cambridge University Press, London, UK, 1993.
+
+\bibitem{thomson1982}
+David~J Thomson.
+\newblock Spectrum estimation and harmonic analysis.
+\newblock {\em Proceedings of the IEEE}, 70, September 1982.
+
+\end{thebibliography}
