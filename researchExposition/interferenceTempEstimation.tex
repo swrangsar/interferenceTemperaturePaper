@@ -8,13 +8,19 @@
 
 \maketitle
 
-\section{Introduction}
+\begin{abstract}
 
 The concept of interference temperature was introduced by the FCC as a new metric for quantifying and managing interference. Using this model, cognitive radios (CRs) operating in licensed frequency bands would be able to measure their current interference environment and adjust their transmission characteristics so as not to raise the interference temperature over a regulatory limit.
 
-As of now it is hard to predict if interference temperature is going to be practical because no one has been able to come up with a solution that is agreed upon by everyone. The research on interference temperature has mostly been abandoned but there is some hope of a comeback.
+As of now it is hard to predict if interference temperature is going to be practical because no one has been able to come up with a solution that is agreed upon by everyone. The research on interference temperature was abandoned by the Federal Communications Commission (FCC) in 2007 but there is some hope of a comeback.
 
-The purpose of the metric is to remove the subjective context that has been the basis of interference analysis up to now\cite{kolodzy2006}. The development of an interference metric is critical to making efficient use of the spectrum.
+This document highlights what i have learned about interference temperature during my supervised research exposition.
+
+\end{abstract}
+
+\section{Introduction}
+
+The purpose of this metric (interference temperature) is to remove the subjective context that has been the basis of interference analysis up to now\cite{kolodzy2006}. The development of an interference metric is critical to making efficient use of the spectrum.
 
 The current regulatory definition of interference is not precise. The process used to estimate interference by the regulatory bodies takes a lot of time. It is specific to particular deployment geometry and cannot be automated. They usually do a very detailed analysis of the surroundings.
 
@@ -35,7 +41,7 @@ Technological advances have led to increased diversity of spectrum-based consume
 With more people owning cellular devices and with people owning more cellular devices, density of mobile devices has increased. Increased density has made interference management more difficult.
 
 \section{Interference Temperature model}
-Interference temperature, $T_I$ is defined\cite{kolodzy2006, clancy2006} as
+Interference temperature, $T_I$ is defined\cite{clancy2006, kolodzy2006} as
 \begin{equation*} 
     T_I(f_c , B) = \frac{P_I(f_c , B)}{kB}
 \end{equation*}
