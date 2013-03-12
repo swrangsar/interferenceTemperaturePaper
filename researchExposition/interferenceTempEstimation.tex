@@ -1,6 +1,6 @@
 \documentclass[12pt]{article}
 \usepackage{amsmath}
-\title{Estimation of Interference Temperature}
+\title{Interference Temperature}
 \author{Swrangsar Basumatary}
 
 \begin{document}
@@ -14,7 +14,7 @@ The concept of interference temperature was introduced by the FCC as a new metri
 
 As of now it is hard to predict if interference temperature is going to be practical because no one has been able to come up with a solution that is agreed upon by everyone. The research on interference temperature was abandoned by the Federal Communications Commission (FCC) in 2007 but there is some hope of a comeback.
 
-This document highlights what i have learned about interference temperature during my supervised research exposition.
+This document highlights what I have learned about interference temperature as part of my supervised research exposition.
 
 \end{abstract}
 
@@ -22,15 +22,15 @@ This document highlights what i have learned about interference temperature duri
 
 The purpose of this metric (interference temperature) is to remove the subjective context that has been the basis of interference analysis up to now\cite{kolodzy2006}. The development of an interference metric is critical to making efficient use of the spectrum.
 
-The current regulatory definition of interference is not precise. The process used to estimate interference by the regulatory bodies takes a lot of time. It is specific to particular deployment geometry and cannot be automated. They usually do a very detailed analysis of the surroundings.
+The current regulatory definition of interference is not precise. The process used by the regulatory bodies to estimate interference is slow. It is specific to particular deployment geometries and thereby cannot be automated. They usually do a  detailed analysis of the surroundings.
 
-With the progress in technology, new devices have come up that are capable of waveform modification and changing frequency of operation very quickly. These new devices have the potential to make more efficient use of the spectrum. But without a clear definition of interference, we would not be able to utilize these new technologies completely. Performing detailed analysis for every combination of waveforms and receivers is not possible.
+With the progress in technology, new devices have shown up that are capable of waveform modification and changing frequency of operation very quickly. These new devices have the potential to make more efficient use of the spectrum. But without a clear definition of interference, we will lose the ability to exploit these new technologies to harness the spectral resources. Performing detailed analysis for every combination of waveforms and receivers is not feasible.
 
 Relying on worst case analysis leaves much of the spectrum unused. Thus there is a need for some real-time interference metric so that we can make efficient use of the spectral resources that are available.
 
 \section{Driving forces for interference metric}
 
-Spectrum management revolves around interference management\cite{kolodzy2006}. The design and operation of all RF equipments is based on reducing electromagnetic interference. Interference limits the usable range of wireless signals.
+Spectrum management revolves around interference management\cite{kolodzy2006}. The design and operation of all RF equipments is based on the idea of reducing electromagnetic interference. Interference limits the usable range of wireless signals.
 
 \subsection*{Changing landscape}
 
@@ -38,7 +38,7 @@ Technological advances have led to increased diversity of spectrum-based consume
 
 \subsection*{Increased density and mobility}
 
-With more people owning cellular devices and with people owning more cellular devices, density of mobile devices has increased. Increased density has made interference management more difficult.
+More and more people are owning cellphones these days. The ones that had cellphones before are owning even more cellphones now. Similarly, people are owning more number of other cellular devices. So, density of mobile devices has increased and increased density has made interference management even more complicated and difficult.
 
 \section{Interference Temperature model}
 Interference temperature, $T_I$ is defined\cite{clancy2006, kolodzy2006} as
@@ -46,7 +46,7 @@ Interference temperature, $T_I$ is defined\cite{clancy2006, kolodzy2006} as
     T_I(f_c , B) = \frac{P_I(f_c , B)}{kB}
 \end{equation*}
 where $P_I(f_c,B)$ is the average interference power centered at frequency, $f_c$, and covering bandwidth
-$B$. Here, $k$ is the Boltzmann's constant $k = 1.38 * 10^{-23} $ joules per degree Kelvin. In SI system, the unit of interference temperature turns out to be \emph{degrees Kelvin}.
+$B$. Here, $k$ is the Boltzmann's constant $k = 1.38 \times 10^{-23} $ joules per degree Kelvin. In SI system, the unit of interference temperature turns out to be \emph{degrees Kelvin}.
 
 The Interference Temperature model\cite{clancy2006} is not clear cut. There is ambiguity regarding whether to represent $T_I$ in terms of the transmitter's parameters ($f_c$ and $B$) or the ones from the $i$'th receiver ($f_i$ and $B_i$).
 This results into two models\cite{clancy2006}:
@@ -61,15 +61,7 @@ In the ideal model we try to guarantee that
 \begin{equation}
     T_I(f_i,B_i) + \frac{M_iP}{kB_i} \leq T_L(f_i) \qquad \forall \quad 1 \leq i \leq n \label{idealModel}
 \end{equation}
-where,
-\begin{quote}
-\begin{description}
-    \item[$T_L(f_i)\longrightarrow$] the interference temperature limit of the $i$'th receiver at center frequency $f_i$
-    \item[$T_I(f_i,B_i)\longrightarrow$] the interference temperature of the $i$'th receiver with center frequency $f_i$ and bandwidth $B_i$
-    \item[$P\longrightarrow$] power of the unlicensed transmitter
-    \item[$M_i\longrightarrow$] a constant between 0 and 1 representing the attenuation of the  transmitted power $P$ at the $i$'th receiver.
-\end{description}
-\end{quote}
+where, $T_L(f_i)$ is the interference temperature limit of the $i$'th receiver at center frequency $f_i$, $T_I(f_i,B_i)$ is  the interference temperature of the $i$'th receiver with center frequency $f_i$ and bandwidth $B_i$, $P$ is the power of the unlicensed transmitter, and $M_i$ is a constant between 0 and 1 representing the attenuation of the  transmitted power $P$ at the $i$'th receiver.
 
 In words, equation \eqref{idealModel} means we try to keep the sum of the interference at the receiver (due to all other factors except the unlicensed transmitter) and the interference caused by the unlicensed transmitter's signal below the temperature limit $T_L$. Usually, a unified factor $M$ is used instead of $M_i$'s because we do not know the distance of every receiver. The factor $M$ is fixed by the regulators.
 
@@ -87,15 +79,8 @@ The generalized model assumes that we have no a priori knowledge about the signa
 \begin{equation}
     T_I(f_c,B) + \frac{MP}{kB} \leq T_L(f_c) \label{generalizedModel}
 \end{equation}
-where,
-\begin{quote}
-\begin{description}
-    \item[$T_L(f_c)\longrightarrow$] the interference temperature limit of the unlicensed transmitter
-    \item[$T_I(f_c,B)\longrightarrow$] the interference temperature of the unlicensed transmitter
-    \item[$P\longrightarrow$] power of the unlicensed transmitter
-    \item[$M\longrightarrow$] a constant between 0 and 1 representing the factor by which the transmitted power gets attenuated
-\end{description}
-\end{quote}
+where, $T_L(f_c)$ is the interference temperature limit of the unlicensed transmitter,
+$T_I(f_c,B)$ is the interference temperature of the unlicensed transmitter, $P$ is the power of the unlicensed transmitter, and $M$ is a constant between 0 and 1 representing the factor by which the transmitted power gets attenuated.
 
 If we constrain the transmitted power $P$ to be less than the one in the ideal model, from the equations \eqref{idealModel} and \eqref{generalizedModel} we get the following constraint,
 \begin{equation}
@@ -116,7 +101,7 @@ Though $T_I(f_c,B)$ can be measured easily, inclusion of all signals in its meas
 
 \section{Properties of the Interference Temperature}
 
-The problem with Interference Temperature model is that it is too simple. It tries to quantify interference assuming that interference behaves like noise. But interference doesn't actually behave like noise because interference includes all other signals other than other than the one from the licensed transmitter. We are defining interference to be that way. So, \emph{Interference Temperature} can't really model interference well enough.
+The problem with Interference Temperature model is that it is too simple. It tries to quantify interference assuming that interference behaves like noise. But interference doesn't actually behave like noise because interference includes all other signals other than the one from the licensed transmitter. We are defining interference to be that way. So, \emph{Interference Temperature} can't really model interference well enough.
 
 The difference between the regulated temperature limit and the measured temperature is the amount of temperature that we are allowed to generate at the receiver. This temperature difference determines how much power our unlicensed transmitter can transmit to comply with the regulations.
 
