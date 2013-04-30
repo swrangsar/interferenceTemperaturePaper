@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2013.1.11)  30 APR 2013 10:29
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2013.1.11)  30 APR 2013 10:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -230,7 +230,7 @@ Package pdftex.def Info: DPSS_figure.jpg used on input line 157.
 Here is how much of TeX's memory you used:
  2139 strings out of 493488
  29291 string characters out of 3141326
- 90949 words of memory out of 3000000
+ 90960 words of memory out of 3000000
  5426 multiletter control sequences out of 15000+200000
  11509 words of font info for 41 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
@@ -249,7 +249,7 @@ sfonts/cm/cmr8.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfo
 nts/cm/cmsy10.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfon
 ts/cm/cmsy8.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmti12.pfb>
-Output written on interferenceTempEstimation.pdf (9 pages, 244330 bytes).
+Output written on interferenceTempEstimation.pdf (9 pages, 244339 bytes).
 PDF statistics:
  88 PDF objects out of 1000 (max. 8388607)
  61 compressed objects within 1 object stream
