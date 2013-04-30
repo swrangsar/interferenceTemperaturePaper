@@ -1,5 +1,6 @@
 \documentclass[12pt]{article}
 \usepackage{amsmath}
+\usepackage{graphicx}
 \title{Interference Temperature}
 \author{Swrangsar Basumatary}
 \date{April 2013}
@@ -12,7 +13,7 @@
 
 The concept of interference temperature was introduced by the FCC as a new metric for quantifying and managing interference. Using this model, cognitive radios (CRs) operating in licensed frequency bands would be able to measure their current interference environment and adjust their transmission characteristics so as not to raise the interference temperature over a regulatory limit.
 
-As of now it is hard to predict if interference temperature is going to be practical because no one has been able to come up with a solution that is agreed upon by everyone. The research on interference temperature was abandoned by the Federal Communications Commission (FCC) in 2007 but there is some hope of a comeback.
+As of now it is hard to predict whether interference temperature is going to be practical because no one has been able to come up with a solution that is agreed upon by everyone. The research on interference temperature was abandoned by the Federal Communications Commission (FCC) in 2007 but there is some hope of a comeback.
 
 This document highlights what I have learned about interference temperature as part of my supervised research exposition.
 
@@ -26,7 +27,7 @@ The current regulatory definition of interference is not precise. The process us
 
 With the progress in technology, new devices have shown up that are capable of waveform modification and changing frequency of operation very quickly. These new devices have the potential to make more efficient use of the spectrum. But without a clear definition of interference, we will lose the ability to exploit these new technologies to harness the spectral resources. Performing detailed analysis for every combination of waveforms and receivers is not feasible.
 
-Relying on worst case analysis leaves much of the spectrum unused. Thus there is a need for some real-time interference metric so that we can make efficient use of the spectral resources that are available.
+Relying on worst case analysis leaves much of the spectrum unused. There is a need for some real-time interference metric so that we can make efficient use of the spectral resources that are available.
 
 \section{Driving forces for interference metric}
 
@@ -38,7 +39,7 @@ Technological advances have led to increased diversity of spectrum-based consume
 
 \subsection*{Increased density and mobility}
 
-More and more people are owning cellphones these days. The ones that had cellphones before are owning even more cellphones now. Similarly, people are owning more number of other cellular devices. So, density of mobile devices has increased and increased density has made interference management even more complicated and difficult.
+More people are owning more cellular devices these days. Density of mobile devices has increased and increased density has made interference management even more complicated.
 
 \section{Interference Temperature model}
 Interference temperature, $T_I$ is defined\cite{clancy2006, kolodzy2006} as
@@ -54,6 +55,17 @@ This results into two models\cite{clancy2006}:
     \item Ideal model
     \item Generalized model
 \end{enumerate}
+
+
+
+\begin{figure}
+\centering
+\includegraphics[width = \linewidth]{interferenceTemperatureModels.png}
+\caption{Ideal and Generalized interpretations of the Interference Temperature Model. (Source: T. Charles Clancy, \emph{Formalizing the Interference Temperature Model}, Wiley Journal On Wireless Communications And Mobile Computing, 2006.)}
+\end{figure}
+
+
+
 
 \subsection*{Ideal model}
 
@@ -99,9 +111,9 @@ Suppose, every receiver receives a power $P_i$ and suppose the noise floor for a
 Though $T_I(f_c,B)$ can be measured easily, inclusion of all signals in its measurement gives rise to a more complex interference environment.
 
 
-\section{Properties of the Interference Temperature}
+\section{Properties of Interference Temperature}
 
-The problem with Interference Temperature model is that it is too simple. It tries to quantify interference assuming that interference behaves like noise. But interference doesn't actually behave like noise because interference includes all other signals other than the one from the licensed transmitter. We are defining interference to be that way. So, \emph{Interference Temperature} can't really model interference well enough.
+The problem with Interference Temperature model is that it is too simple. It tries to quantify interference assuming that interference behaves like noise. But interference doesn't actually behave like noise because we have defined interference to include all signals other than the one from the licensed transmitter. \emph{Interference Temperature} can't really model interference well enough.
 
 The difference between the regulated temperature limit and the measured temperature is the amount of temperature that we are allowed to generate at the receiver. This temperature difference determines how much power our unlicensed transmitter can transmit to comply with the regulations.
 
@@ -138,6 +150,15 @@ A nonparametric spectral estimation method is required for this purpose and \emp
 
 \subsection*{Multitaper spectral estimation}
 This method uses \emph{multiple orthonormal tapers}\cite{haykin2009, thomson1982} to give different estimates of the spectrum. These estimates are then averaged to give the final estimate. This final estimate turns out to have both reduced bias and reduced variance\cite{haykin2009, thomson1982, percival1993}.
+
+
+\begin{figure}
+\centering
+\includegraphics[width=0.65\linewidth]{DPSS_figure.jpg}
+\caption{The three leading Slepian sequences for T=1000 and 2WT=6. Note that each higher order sequence has an extra zero crossing. [Source: http://en.wikipedia.org/wiki/Multitaper]}
+\end{figure}
+
+
 
 
 For a time series $\{x_t\}_{t=1}^N$, the multitaper spectral estimation procedure determines two things.
@@ -186,7 +207,7 @@ Each element in $\mathbf{A}(f)$ has contributions from both the additive interna
     \mathbf{A}(f) = \sum_{k=0}^{K-1} \sigma_k(f) \mathbf{u}_k(f) \mathbf{v}_k^{\dag}(f)
 \end{equation}
 
-We then take the left singular vectors $\mathbf{u}_k(f)$ and the right singular vectors $\mathbf{v}_k(f)$ corresponding to the first few largest eigenvalues $|\sigma_k(f)|^2$. The first few largest eigenvalues $|\sigma_k(f)|^2$ provide a pretty good estimate of the interference temperature.
+We take the left singular vectors $\mathbf{u}_k(f)$ and the right singular vectors $\mathbf{v}_k(f)$ corresponding to the first few largest eigenvalues $|\sigma_k(f)|^2$. The first few largest eigenvalues $|\sigma_k(f)|^2$ provide a pretty good estimate of the interference temperature.
 
 
 
