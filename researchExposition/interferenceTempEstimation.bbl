@@ -11,6 +11,11 @@ Simon Haykin.
 \newblock Cognitive radio: Brain-empowered wireless communications.
 \newblock {\em IEEE Journal on selected areas in communications}, 23(2), 2005.
 
+\bibitem{haykin2009}
+Simon Haykin, David~J Thomson, and Jeffrey~H Reed.
+\newblock Spectrum sensing for cognitive radio.
+\newblock {\em Proceedings of the IEEE}, 97(5), May 2009.
+
 \bibitem{kolodzy2006}
 Paul~J Kolodzy.
 \newblock Interference temperature: A metric for dynamic spectrum utilization.
